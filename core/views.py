@@ -2,6 +2,11 @@ from rest_framework import generics, permissions
 from .models import Project, Pledge
 from .serializers import ProjectSerializer, PledgeSerializer
 from rest_framework.permissions import IsAuthenticated
+from django.http import HttpResponse
+
+
+def home(request):
+    return HttpResponse("Welcome to CrwondFundMe API")
 
 # List all projects
 
